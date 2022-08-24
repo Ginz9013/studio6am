@@ -12,10 +12,16 @@ module.exports = {
       colors: {
         primary: '#000000',
         secondary: {
-          DEFAULT: '#444444',
+          DEFAULT: '#171717',
           light: '#2c2c2c',
         },
       },
+      rotate: {
+        'm45': '-45deg',
+      },
+      screens: {
+        'msm': {'max': '445px'}
+      }
     },
   },
   plugins: [],

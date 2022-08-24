@@ -1,27 +1,39 @@
 <template>
   <main class="xl:flex">
     <nav
-      class="w-sideBar h-screen bg-black flex flex-col items-start justify-center px-14 fixed"
+      class="xl:w-sideBar xl:h-screen bg-black flex flex-col items-center xl:items-start justify-center px-4 md:px-12 2xl:px-14 pt-8 pb-4 xl:fixed"
     >
       <router-link to="/">
         <img
           src="./assets/Logo_whtie_nobg@2x.png"
-          class="mb-8"
+          class="mb-8 h-16 xl:w-full"
           alt="6.am Studio"
         />
       </router-link>
-      <ul class="text-lg text-white">
-        <li>
-          <router-link to="/" class="hover:font-bold">Design Works</router-link>
+      <ul
+        class="text-lg text-white flex xl:inline w-full justify-between items-center"
+      >
+        <li class="mx-2 msm:w-1/4">
+          <router-link to="/DesignWorks" class="hover:font-bold">
+            Design Works
+          </router-link>
         </li>
-        <li>
-          <router-link to="/about" class="hover:font-bold"
+        <li class="mx-2 msm:w-1/4">
+          <router-link to="/WebWorks" class="hover:font-bold"
             >Web Works
+          </router-link>
+        </li>
+        <li class="mx-2 msm:w-1/4">
+          <router-link to="/about" class="hover:font-bold">About</router-link>
+        </li>
+        <li class="mx-2 msm:w-1/4">
+          <router-link to="/ContactMe" class="hover:font-bold"
+            >Contact Me
           </router-link>
         </li>
       </ul>
     </nav>
-    <router-view class="ml-content" />
+    <router-view class="xl:ml-content" />
   </main>
 </template>
 

@@ -8,6 +8,16 @@ const routes = [
     component: HomeView,
   },
   {
+    path: "/DesignWorks",
+    name: "DesignWorks",
+    component: () => import("../views/DesignWorks.vue"),
+  },
+  {
+    path: "/WebWorks",
+    name: "WebWorks",
+    component: () => import("../views/WebWorks.vue"),
+  },
+  {
     path: "/about",
     name: "about",
     // route level code-splitting
@@ -15,6 +25,11 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+  },
+  {
+    path: "/ContactMe",
+    name: "ContactMe",
+    component: () => import("../views/ContactMe.vue"),
   },
 ];
 

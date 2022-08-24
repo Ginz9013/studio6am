@@ -1,60 +1,71 @@
 <template>
-  <div class="flex flex-wrap items-start">
-    <!-- Waterfall 1 -->
-    <div class="w-full md:w-1/2 xl:w-1/3 2xl:w-1/4">
-      <WorksCard v-for="item in ProjectsArr1" :key="item.name">
-        <template v-slot:cover>
-          <img :src="item.imgCover" :alt="item.name" />
-        </template>
-        <template v-slot:contentTittle>
-          <p>{{ item.name }}</p>
-        </template>
-        <template v-slot:content>
-          <img v-for="img in item.imgContent" :key="img" :src="img" alt="" />
-        </template>
-      </WorksCard>
+  <div class="flex-col">
+    <div class="w-full h-16 xl:h-32 bg-secondary flex items-end py-5 pl-4">
+      <ul class="flex text-xl text-white">
+        <li class="mx-6">Graphic</li>
+        <li class="mx-6">Logo</li>
+        <li class="mx-6">Brand</li>
+        <li class="mx-6">Web UI</li>
+        <li class="mx-6">Others</li>
+      </ul>
     </div>
-    <!-- Waterfall 2 -->
-    <div class="w-full md:w-1/2 xl:w-1/3 2xl:w-1/4">
-      <WorksCard v-for="item in ProjectsArr2" :key="item.name">
-        <template v-slot:cover>
-          <img :src="item.imgCover" :alt="item.name" />
-        </template>
-        <template v-slot:contentTittle>
-          <p>{{ item.name }}</p>
-        </template>
-        <template v-slot:content>
-          <img v-for="img in item.imgContent" :key="img" :src="img" alt="" />
-        </template>
-      </WorksCard>
-    </div>
-    <!-- Waterfall 3 -->
-    <div class="w-full md:w-1/2 xl:w-1/3 2xl:w-1/4">
-      <WorksCard v-for="item in ProjectsArr3" :key="item.name">
-        <template v-slot:cover>
-          <img :src="item.imgCover" :alt="item.name" />
-        </template>
-        <template v-slot:contentTittle>
-          <p>{{ item.name }}</p>
-        </template>
-        <template v-slot:content>
-          <img v-for="img in item.imgContent" :key="img" :src="img" alt="" />
-        </template>
-      </WorksCard>
-    </div>
-    <!-- Waterfall 4 -->
-    <div class="w-full md:w-1/2 xl:w-1/3 2xl:w-1/4">
-      <WorksCard v-for="item in ProjectsArr4" :key="item.name">
-        <template v-slot:cover>
-          <img :src="item.imgCover" :alt="item.name" />
-        </template>
-        <template v-slot:contentTittle>
-          <p>{{ item.name }}</p>
-        </template>
-        <template v-slot:content>
-          <img v-for="img in item.imgContent" :key="img" :src="img" alt="" />
-        </template>
-      </WorksCard>
+    <div class="flex flex-wrap items-start">
+      <!-- Waterfall 1 -->
+      <div class="w-full md:w-1/2 xl:w-1/3 2xl:w-1/4">
+        <WorksCard v-for="item in ProjectsArr1" :key="item.name">
+          <template v-slot:cover>
+            <img :src="item.imgCover" :alt="item.name" />
+          </template>
+          <template v-slot:contentTittle>
+            <p>{{ item.name }}</p>
+          </template>
+          <template v-slot:content>
+            <img v-for="img in item.imgContent" :key="img" :src="img" alt="" />
+          </template>
+        </WorksCard>
+      </div>
+      <!-- Waterfall 2 -->
+      <div class="w-full md:w-1/2 xl:w-1/3 2xl:w-1/4">
+        <WorksCard v-for="item in ProjectsArr2" :key="item.name">
+          <template v-slot:cover>
+            <img :src="item.imgCover" :alt="item.name" />
+          </template>
+          <template v-slot:contentTittle>
+            <p>{{ item.name }}</p>
+          </template>
+          <template v-slot:content>
+            <img v-for="img in item.imgContent" :key="img" :src="img" alt="" />
+          </template>
+        </WorksCard>
+      </div>
+      <!-- Waterfall 3 -->
+      <div class="w-full md:w-1/2 xl:w-1/3 2xl:w-1/4">
+        <WorksCard v-for="item in ProjectsArr3" :key="item.name">
+          <template v-slot:cover>
+            <img :src="item.imgCover" :alt="item.name" />
+          </template>
+          <template v-slot:contentTittle>
+            <p>{{ item.name }}</p>
+          </template>
+          <template v-slot:content>
+            <img v-for="img in item.imgContent" :key="img" :src="img" alt="" />
+          </template>
+        </WorksCard>
+      </div>
+      <!-- Waterfall 4 -->
+      <div class="w-full md:w-1/2 xl:w-1/3 2xl:w-1/4">
+        <WorksCard v-for="item in ProjectsArr4" :key="item.name">
+          <template v-slot:cover>
+            <img :src="item.imgCover" :alt="item.name" />
+          </template>
+          <template v-slot:contentTittle>
+            <p>{{ item.name }}</p>
+          </template>
+          <template v-slot:content>
+            <img v-for="img in item.imgContent" :key="img" :src="img" alt="" />
+          </template>
+        </WorksCard>
+      </div>
     </div>
   </div>
 </template>
