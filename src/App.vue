@@ -109,12 +109,41 @@ export default {
               require("./assets/SportsNet/08.png"),
             ],
           },
+          {
+            name: "Concenpt - Yamato Soul",
+            imgCover: require("./assets/ConceptWorks/yamato.png"),
+            imgContent: [require("./assets/ConceptWorks/yamato.png")],
+          },
+          {
+            name: "Concenpt - Polymerization",
+            imgCover: require("./assets/ConceptWorks/polymerization.png"),
+            imgContent: [require("./assets/ConceptWorks/polymerization.png")],
+          },
         ],
         web: [
           {
             name: "Studio 6.am",
             imgCover: require("./assets/Studio-6am/cover.png"),
-            imgContent: [require("./assets/Studio-6am/cover.png")],
+            imgContent: [
+              require("./assets/Studio-6am/cover.png"),
+              require("./assets/Studio-6am/02.png"),
+              require("./assets/Studio-6am/03.png"),
+              require("./assets/Studio-6am/04.png"),
+              require("./assets/Studio-6am/05.png"),
+            ],
+          },
+          {
+            name: "Doyoga",
+            imgCover: require("./assets/Doyoga/cover.png"),
+            imgContent: [require("./assets/Doyoga/02.png")],
+          },
+          {
+            name: "Web Test - Jear Life",
+            imgCover: require("./assets/JearLifeWeb/cover.png"),
+            imgContent: [
+              require("./assets/JearLifeWeb/cover.png"),
+              require("./assets/JearLifeWeb/02.png"),
+            ],
           },
         ],
       },
@@ -123,6 +152,7 @@ export default {
   provide() {
     return {
       allProjects: this.projects,
+      designProjects: this.projects.design,
     };
   },
 };

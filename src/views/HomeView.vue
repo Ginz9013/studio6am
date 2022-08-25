@@ -2,7 +2,7 @@
   <div class="flex flex-wrap items-start">
     <!-- Waterfall 1 -->
     <div class="w-full md:w-1/2 xl:w-1/3 2xl:w-1/4">
-      <WorksCard v-for="item in ProjectsArr1" :key="item.name">
+      <WorksCard v-for="item in projectsArr1" :key="item.name">
         <template v-slot:cover>
           <img :src="item.imgCover" :alt="item.name" />
         </template>
@@ -16,7 +16,7 @@
     </div>
     <!-- Waterfall 2 -->
     <div class="w-full md:w-1/2 xl:w-1/3 2xl:w-1/4">
-      <WorksCard v-for="item in ProjectsArr2" :key="item.name">
+      <WorksCard v-for="item in projectsArr2" :key="item.name">
         <template v-slot:cover>
           <img :src="item.imgCover" :alt="item.name" />
         </template>
@@ -30,7 +30,7 @@
     </div>
     <!-- Waterfall 3 -->
     <div class="w-full md:w-1/2 xl:w-1/3 2xl:w-1/4">
-      <WorksCard v-for="item in ProjectsArr3" :key="item.name">
+      <WorksCard v-for="item in projectsArr3" :key="item.name">
         <template v-slot:cover>
           <img :src="item.imgCover" :alt="item.name" />
         </template>
@@ -44,7 +44,7 @@
     </div>
     <!-- Waterfall 4 -->
     <div class="w-full md:w-1/2 xl:w-1/3 2xl:w-1/4">
-      <WorksCard v-for="item in ProjectsArr4" :key="item.name">
+      <WorksCard v-for="item in projectsArr4" :key="item.name">
         <template v-slot:cover>
           <img :src="item.imgCover" :alt="item.name" />
         </template>
@@ -71,10 +71,10 @@ export default {
   data() {
     return {
       allProjectsArr: [],
-      ProjectsArr1: [],
-      ProjectsArr2: [],
-      ProjectsArr3: [],
-      ProjectsArr4: [],
+      projectsArr1: [],
+      projectsArr2: [],
+      projectsArr3: [],
+      projectsArr4: [],
       colStatus: 4,
     };
   },
@@ -92,10 +92,10 @@ export default {
     },
     // 重置瀑布流的 Col 資料
     resetCol() {
-      this.ProjectsArr1 = [];
-      this.ProjectsArr2 = [];
-      this.ProjectsArr3 = [];
-      this.ProjectsArr4 = [];
+      this.projectsArr1 = [];
+      this.projectsArr2 = [];
+      this.projectsArr3 = [];
+      this.projectsArr4 = [];
     },
     // 重新分配 4 列資料
     sliceArr4() {
@@ -103,16 +103,16 @@ export default {
       this.allProjectsArr.forEach((e, index) => {
         switch (index % 4) {
           case 0:
-            this.ProjectsArr1.push(e);
+            this.projectsArr1.push(e);
             break;
           case 1:
-            this.ProjectsArr2.push(e);
+            this.projectsArr2.push(e);
             break;
           case 2:
-            this.ProjectsArr3.push(e);
+            this.projectsArr3.push(e);
             break;
           case 3:
-            this.ProjectsArr4.push(e);
+            this.projectsArr4.push(e);
             break;
         }
       });
@@ -123,13 +123,13 @@ export default {
       this.allProjectsArr.forEach((e, index) => {
         switch (index % 3) {
           case 0:
-            this.ProjectsArr1.push(e);
+            this.projectsArr1.push(e);
             break;
           case 1:
-            this.ProjectsArr2.push(e);
+            this.projectsArr2.push(e);
             break;
           case 2:
-            this.ProjectsArr3.push(e);
+            this.projectsArr3.push(e);
             break;
         }
       });
@@ -140,10 +140,10 @@ export default {
       this.allProjectsArr.forEach((e, index) => {
         switch (index % 2) {
           case 0:
-            this.ProjectsArr1.push(e);
+            this.projectsArr1.push(e);
             break;
           case 1:
-            this.ProjectsArr2.push(e);
+            this.projectsArr2.push(e);
             break;
         }
       });
@@ -151,7 +151,7 @@ export default {
     // 重新分配 1 列資料
     sliceArr1() {
       this.resetCol();
-      this.ProjectsArr1 = this.allProjectsArr;
+      this.projectsArr1 = this.allProjectsArr;
     },
     setCol() {
       if (window.innerWidth >= 1536) {

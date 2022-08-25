@@ -1,13 +1,13 @@
 <template>
   <div class="flex-col">
     <div class="w-full h-16 xl:h-32 bg-secondary flex items-end py-5 pl-4">
-      <ul class="flex text-xl text-white">
-        <li class="mx-6">Graphic</li>
-        <li class="mx-6">Logo</li>
-        <li class="mx-6">Brand</li>
-        <li class="mx-6">Web UI</li>
-        <li class="mx-6">Others</li>
-      </ul>
+      <div class="flex text-xl text-white">
+        <button type="button" class="mx-6 hover:text-gray-400">Graphic</button>
+        <button type="button" class="mx-6 hover:text-gray-400">Logo</button>
+        <button type="button" class="mx-6 hover:text-gray-400">Brand</button>
+        <button type="button" class="mx-6 hover:text-gray-400">Web UI</button>
+        <button type="button" class="mx-6 hover:text-gray-400">Others</button>
+      </div>
     </div>
     <div class="flex flex-wrap items-start">
       <!-- Waterfall 1 -->
@@ -75,13 +75,13 @@
 import WorksCard from "@/components/WorksCard.vue";
 
 export default {
-  name: "HomeView",
+  name: "DesignWorks",
   components: {
     WorksCard,
   },
   data() {
     return {
-      allProjectsArr: [],
+      designProjectsArr: [],
       ProjectsArr1: [],
       ProjectsArr2: [],
       ProjectsArr3: [],
@@ -89,17 +89,11 @@ export default {
       colStatus: 4,
     };
   },
-  inject: ["allProjects"],
+  inject: ["designProjects"],
   methods: {
-    // 重組陣列 - 把所有分類的項目全部整合到一個陣列中
-    spliceArr() {
-      // 把 injects 進來的資料組成陣列，匯入 data 中的 allProjectsArr
-      this.allProjects.design.forEach((e) => {
-        this.allProjectsArr.push(e);
-      });
-      this.allProjects.web.forEach((e) => {
-        this.allProjectsArr.push(e);
-      });
+    // 預設 - 把 inject 進來的資料附值上去
+    setArr() {
+      this.designProjectsArr = this.designProjects;
     },
     // 重置瀑布流的 Col 資料
     resetCol() {
@@ -111,7 +105,7 @@ export default {
     // 重新分配 4 列資料
     sliceArr4() {
       this.resetCol();
-      this.allProjectsArr.forEach((e, index) => {
+      this.designProjectsArr.forEach((e, index) => {
         switch (index % 4) {
           case 0:
             this.ProjectsArr1.push(e);
@@ -131,7 +125,7 @@ export default {
     // 重新分配 3 列資料
     sliceArr3() {
       this.resetCol();
-      this.allProjectsArr.forEach((e, index) => {
+      this.designProjectsArr.forEach((e, index) => {
         switch (index % 3) {
           case 0:
             this.ProjectsArr1.push(e);
@@ -148,7 +142,7 @@ export default {
     // 重新分配 2 列資料
     sliceArr2() {
       this.resetCol();
-      this.allProjectsArr.forEach((e, index) => {
+      this.designProjectsArr.forEach((e, index) => {
         switch (index % 2) {
           case 0:
             this.ProjectsArr1.push(e);
@@ -162,7 +156,7 @@ export default {
     // 重新分配 1 列資料
     sliceArr1() {
       this.resetCol();
-      this.ProjectsArr1 = this.allProjectsArr;
+      this.ProjectsArr1 = this.designProjectsArr;
     },
     setCol() {
       if (window.innerWidth >= 1536) {
@@ -177,7 +171,7 @@ export default {
     },
   },
   mounted() {
-    this.spliceArr();
+    this.setArr();
     this.setCol();
     // 動態監聽視窗寬度
     window.addEventListener("resize", () => {
