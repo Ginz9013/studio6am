@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkstudio_6am"]=self["webpackChunkstudio_6am"]||[]).push([[995],{9995:function(n,s,u){u.r(s),u.d(s,{default:function(){return f}});var t=u(3396);const a={class:"about"},e=(0,t._)("h1",null,"This is an Web Works page",-1),r=[e];function i(n,s){return(0,t.wg)(),(0,t.iD)("div",a,r)}var c=u(89);const o={},d=(0,c.Z)(o,[["render",i]]);var f=d}}]);
+//# sourceMappingURL=995.5f30b4cf.js.map
