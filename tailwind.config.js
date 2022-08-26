@@ -7,6 +7,9 @@ module.exports = {
         sideBar: '18vw',
         contentBar: '82vw',
       },
+      height: {
+        contactArea: '85vh',
+      },
       margin: {
         'content': '18vw',
       },

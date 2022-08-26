@@ -1,7 +1,7 @@
 <template>
   <main class="xl:flex">
     <nav
-      class="xl:w-sideBar xl:h-screen bg-black flex flex-col items-center xl:items-start justify-center px-4 md:px-12 2xl:px-14 pt-8 pb-4 xl:fixed"
+      class="xl:w-sideBar xl:h-screen bg-black flex flex-col items-center xl:items-start justify-center px-4 sm:px-24 md:px-48 lg:px-60 xl:px-12 2xl:px-14 pt-8 pb-4 xl:fixed"
     >
       <router-link to="/">
         <img
@@ -22,9 +22,6 @@
           <router-link to="/WebWorks" class="hover:font-bold"
             >Web Works
           </router-link>
-        </li>
-        <li class="mx-2 msm:w-1/4">
-          <router-link to="/about" class="hover:font-bold">About</router-link>
         </li>
         <li class="mx-2 msm:w-1/4">
           <router-link to="/ContactMe" class="hover:font-bold"
