@@ -75,11 +75,15 @@ export default {
       projectsArr2: [],
       projectsArr3: [],
       projectsArr4: [],
-      colStatus: 4,
     };
   },
   inject: ["allProjects"],
   methods: {
+    setView() {
+      this.spliceArr();
+      this.setCol();
+    },
+    // ----- allProjectsArr 頁面資料庫 ------
     // 重組陣列 - 把所有分類的項目全部整合到一個陣列中
     spliceArr() {
       // 把 injects 進來的資料組成陣列，匯入 data 中的 allProjectsArr
@@ -90,6 +94,7 @@ export default {
         this.allProjectsArr.push(e);
       });
     },
+    // ----- Col 顯示資料 ------
     // 重置瀑布流的 Col 資料
     resetCol() {
       this.projectsArr1 = [];
@@ -97,11 +102,10 @@ export default {
       this.projectsArr3 = [];
       this.projectsArr4 = [];
     },
-    // 重新分配 4 列資料
-    sliceArr4() {
-      this.resetCol();
+    // 分配資料到不同數量的 Col 中
+    sliceArr(i) {
       this.allProjectsArr.forEach((e, index) => {
-        switch (index % 4) {
+        switch (index % i) {
           case 0:
             this.projectsArr1.push(e);
             break;
@@ -117,57 +121,22 @@ export default {
         }
       });
     },
-    // 重新分配 3 列資料
-    sliceArr3() {
-      this.resetCol();
-      this.allProjectsArr.forEach((e, index) => {
-        switch (index % 3) {
-          case 0:
-            this.projectsArr1.push(e);
-            break;
-          case 1:
-            this.projectsArr2.push(e);
-            break;
-          case 2:
-            this.projectsArr3.push(e);
-            break;
-        }
-      });
-    },
-    // 重新分配 2 列資料
-    sliceArr2() {
-      this.resetCol();
-      this.allProjectsArr.forEach((e, index) => {
-        switch (index % 2) {
-          case 0:
-            this.projectsArr1.push(e);
-            break;
-          case 1:
-            this.projectsArr2.push(e);
-            break;
-        }
-      });
-    },
-    // 重新分配 1 列資料
-    sliceArr1() {
-      this.resetCol();
-      this.projectsArr1 = this.allProjectsArr;
-    },
+    // 根據視窗寬度設置 Col 數量
     setCol() {
+      this.resetCol();
       if (window.innerWidth >= 1536) {
-        this.sliceArr4();
+        this.sliceArr(4);
       } else if (window.innerWidth >= 1280) {
-        this.sliceArr3();
+        this.sliceArr(3);
       } else if (window.innerWidth >= 678) {
-        this.sliceArr2();
+        this.sliceArr(2);
       } else {
-        this.sliceArr1();
+        this.sliceArr(1);
       }
     },
   },
   mounted() {
-    this.spliceArr();
-    this.setCol();
+    this.setView();
     // 動態監聽視窗寬度
     window.addEventListener("resize", () => {
       this.setCol();

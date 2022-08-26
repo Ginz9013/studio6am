@@ -60,7 +60,8 @@ export default {
       projects: {
         design: [
           {
-            name: "LOGO - Jear Life",
+            name: "Brand - Jear Life",
+            type: "brand",
             imgCover: require("./assets/JearLifeLogo/07.png"),
             imgContent: [
               require("./assets/JearLifeLogo/01.png"),
@@ -74,6 +75,7 @@ export default {
           },
           {
             name: "Catalog - Scion",
+            type: "others",
             imgCover: require("./assets/ScionCatalog/cover.png"),
             imgContent: [
               require("./assets/ScionCatalog/cover.png"),
@@ -83,20 +85,20 @@ export default {
             ],
           },
           {
-            name: "Web UI - Jear Life",
-            imgCover: require("./assets/JearLifeWeb/cover.png"),
-            imgContent: [
-              require("./assets/JearLifeWeb/cover.png"),
-              require("./assets/JearLifeWeb/02.png"),
-            ],
+            name: "Brand - Studio 6.am",
+            type: "brand",
+            imgCover: require("./assets/Studio-6am/cover.png"),
+            imgContent: [require("./assets/Studio-6am/cover.png")],
           },
           {
-            name: "CI - HowTrue 好初手作烘焙",
+            name: "Brand - HowTrue 好初手作烘焙",
+            type: "brand",
             imgCover: require("./assets/HowTrue/cover.png"),
             imgContent: [require("./assets/HowTrue/cover.png")],
           },
           {
-            name: "LOGO - SportsNet",
+            name: "Brand - SportsNet",
+            type: "brand",
             imgCover: require("./assets/SportsNet/cover.png"),
             imgContent: [
               require("./assets/SportsNet/cover.png"),
@@ -111,18 +113,30 @@ export default {
           },
           {
             name: "Concenpt - Yamato Soul",
+            type: "others",
             imgCover: require("./assets/ConceptWorks/yamato.png"),
             imgContent: [require("./assets/ConceptWorks/yamato.png")],
           },
           {
             name: "Concenpt - Polymerization",
+            type: "others",
             imgCover: require("./assets/ConceptWorks/polymerization.png"),
             imgContent: [require("./assets/ConceptWorks/polymerization.png")],
           },
         ],
         web: [
           {
+            name: "Web UI - Jear Life",
+            type: "webUI",
+            imgCover: require("./assets/JearLifeWeb/cover.png"),
+            imgContent: [
+              require("./assets/JearLifeWeb/cover.png"),
+              require("./assets/JearLifeWeb/02.png"),
+            ],
+          },
+          {
             name: "Studio 6.am",
+            type: "frontEnd",
             imgCover: require("./assets/Studio-6am/cover.png"),
             imgContent: [
               require("./assets/Studio-6am/cover.png"),
@@ -134,16 +148,9 @@ export default {
           },
           {
             name: "Doyoga",
+            type: "frontEnd",
             imgCover: require("./assets/Doyoga/cover.png"),
             imgContent: [require("./assets/Doyoga/02.png")],
-          },
-          {
-            name: "Web Test - Jear Life",
-            imgCover: require("./assets/JearLifeWeb/cover.png"),
-            imgContent: [
-              require("./assets/JearLifeWeb/cover.png"),
-              require("./assets/JearLifeWeb/02.png"),
-            ],
           },
         ],
       },
@@ -153,6 +160,7 @@ export default {
     return {
       allProjects: this.projects,
       designProjects: this.projects.design,
+      webProjects: this.projects.web,
     };
   },
 };

@@ -9,7 +9,7 @@
     <!-- modal -->
     <transition>
       <div
-        class="w-screen h-screen fixed left-0 top-0 flex flex-col justify-center items-center drop-shadow-sm"
+        class="w-screen h-screen fixed left-0 top-0 flex flex-col justify-center items-center drop-shadow-sm z-20"
         v-if="show"
         @click="closeModal"
       >
@@ -56,7 +56,7 @@
   opacity: 0;
 }
 .v-enter-active {
-  transition: opacity 0.75s;
+  transition: opacity 0.5s;
 }
 .v-enter-to {
   opacity: 1;

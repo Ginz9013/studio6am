@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       width: {
         sideBar: '18vw',
+        contentBar: '82vw',
       },
       margin: {
         'content': '18vw',
