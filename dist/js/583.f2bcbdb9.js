@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkstudio_6am"]=self["webpackChunkstudio_6am"]||[]).push([[583],{583:function(n,t,u){u.r(t),u.d(t,{default:function(){return f}});var a=u(3396);const s={class:"about"},e=(0,a._)("h1",null,"This is an Contact me page",-1),r=[e];function c(n,t){return(0,a.wg)(),(0,a.iD)("div",s,r)}var i=u(89);const o={},d=(0,i.Z)(o,[["render",c]]);var f=d}}]);
-//# sourceMappingURL=583.f2bcbdb9.js.map
