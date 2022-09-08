@@ -132,7 +132,10 @@ export default {
           "HAiSjn1ZBNhxS8PbZ"
         )
         .then(() => {
+          // 彈跳視窗，顯示已寄信
           this.checkToggle();
+          // 重置表單內容
+          this.resetFormData();
         });
     },
     validate() {
@@ -174,6 +177,12 @@ export default {
     },
     checkToggle() {
       this.checkModal = !this.checkModal;
+    },
+    resetFormData() {
+      this.formData.name = "";
+      this.formData.email = "";
+      this.formData.subject = "";
+      this.formData.message = "";
     },
     submit() {
       if (this.validate()) {
