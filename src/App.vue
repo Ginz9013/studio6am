@@ -121,9 +121,9 @@ export default {
           {
             name: "Bedding Display",
             type: "others",
-            imgCover: require("./assets/Portfolio/Bedding_Display/cover.png"),
+            imgCover: require("./assets/Portfolio/Bedding_Display/cover.jpg"),
             imgContent: [
-              require("./assets/Portfolio/Bedding_Display/cover.png"),
+              require("./assets/Portfolio/Bedding_Display/cover.jpg"),
               require("./assets/Portfolio/Bedding_Display/01.jpg"),
               require("./assets/Portfolio/Bedding_Display/02.jpg"),
               require("./assets/Portfolio/Bedding_Display/03.jpg"),
@@ -134,7 +134,7 @@ export default {
           {
             name: "Business Card - Chen",
             type: "brand",
-            imgCover: require("./assets/Portfolio/BusinessCard_Raccoon/cover.png"),
+            imgCover: require("./assets/Portfolio/BusinessCard_Raccoon/cover.jpg"),
             imgContent: [
               require("./assets/Portfolio/BusinessCard_Raccoon/01.png"),
               require("./assets/Portfolio/BusinessCard_Raccoon/02.jpg"),
@@ -143,16 +143,33 @@ export default {
           {
             name: "Concenpt - Yamato Soul",
             type: "others",
-            imgCover: require("./assets/Portfolio/YamatoSoul/cover.png"),
+            imgCover: require("./assets/Portfolio/YamatoSoul/cover.jpg"),
             imgContent: [
-              require("./assets/Portfolio/YamatoSoul/YamatoSoul.png"),
+              require("./assets/Portfolio/YamatoSoul/YamatoSoul.jpg"),
             ],
           },
           {
             name: "Concenpt - Polymerization",
             type: "others",
-            imgCover: require("./assets/Portfolio/polymerization/cover.png"),
-            imgContent: [require("./assets/Portfolio/polymerization/01.png")],
+            imgCover: require("./assets/Portfolio/polymerization/cover.jpg"),
+            imgContent: [require("./assets/Portfolio/polymerization/01.jpg")],
+          },
+          {
+            name: "Concenpt - Exist",
+            type: "others",
+            imgCover: require("./assets/Portfolio/Exist/cover.png"),
+            imgContent: [require("./assets/Portfolio/Exist/01.jpg")],
+          },
+          {
+            name: "Photography",
+            type: "others",
+            imgCover: require("./assets/Portfolio/Photography/01.jpg"),
+            imgContent: [
+              require("./assets/Portfolio/Photography/01.jpg"),
+              require("./assets/Portfolio/Photography/02.jpg"),
+              require("./assets/Portfolio/Photography/03.jpg"),
+              require("./assets/Portfolio/Photography/04.jpg"),
+            ],
           },
         ],
         web: [
