@@ -7,21 +7,21 @@
         <button
           type="button"
           @click="setView()"
-          class="mx-3 sm:mx-6 hover:text-gray-400"
+          class="mx-3 sm:mx-6 hover:text-gray-400 duration-300"
         >
           All
         </button>
         <button
           type="button"
           @click="setButtonType('frontEnd')"
-          class="mx-3 sm:mx-6 hover:text-gray-400"
+          class="mx-3 sm:mx-6 hover:text-gray-400 duration-300"
         >
           Front End
         </button>
         <button
           type="button"
           @click="setButtonType('webUI')"
-          class="mx-3 sm:mx-6 hover:text-gray-400"
+          class="mx-3 sm:mx-6 hover:text-gray-400 duration-300"
         >
           Web UI
         </button>

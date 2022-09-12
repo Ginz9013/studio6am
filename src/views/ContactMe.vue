@@ -83,7 +83,7 @@
     <div
       class="flex flex-col items-center text-white bg-secondary-light p-8 z-10 rounded-sm"
     >
-      <h3 class="text-2xl">Mail has be Sanded</h3>
+      <h3 class="text-2xl">Mail has been sent.</h3>
       <br />
       <input
         type="button"

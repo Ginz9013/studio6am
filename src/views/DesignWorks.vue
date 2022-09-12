@@ -7,28 +7,28 @@
         <button
           type="button"
           @click="setView()"
-          class="mx-3 sm:mx-6 hover:text-gray-400"
+          class="mx-3 sm:mx-6 hover:cursor-pointer hover:text-gray-400 duration-300"
         >
           All
         </button>
         <button
           type="button"
           @click="setButtonType('brand')"
-          class="mx-3 sm:mx-6 hover:text-gray-400"
+          class="mx-3 sm:mx-6 hover:cursor-pointer hover:text-gray-400 duration-300"
         >
           Brand
         </button>
         <button
           type="button"
           @click="setButtonType('package')"
-          class="mx-3 sm:mx-6 hover:text-gray-400"
+          class="mx-3 sm:mx-6 hover:cursor-pointer hover:text-gray-400 duration-300"
         >
           Package
         </button>
         <button
           type="button"
           @click="setButtonType('others')"
-          class="mx-3 sm:mx-6 hover:text-gray-400"
+          class="mx-3 sm:mx-6 hover:cursor-pointer active:font-bold hover:text-gray-400 duration-300"
         >
           Others
         </button>

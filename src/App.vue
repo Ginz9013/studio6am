@@ -6,25 +6,25 @@
       <router-link to="/">
         <img
           src="./assets/Logo_whtie_nobg@2x.png"
-          class="mb-8 h-16 xl:w-full"
+          class="mb-8 h-16 xl:w-full hover:opacity-50 duration-700"
           alt="6.am Studio"
         />
       </router-link>
       <ul
         class="text-lg text-white flex xl:inline w-full justify-between items-center"
       >
-        <li class="mx-2 msm:w-1/4">
-          <router-link to="/DesignWorks" class="hover:font-bold">
+        <li class="xl:mb-2 mx-2 msm:w-1/4">
+          <router-link to="/DesignWorks" class="hover:font-bold duration-300">
             Design Works
           </router-link>
         </li>
-        <li class="mx-2 msm:w-1/4">
-          <router-link to="/WebWorks" class="hover:font-bold"
+        <li class="xl:mb-2 mx-2 msm:w-1/4">
+          <router-link to="/WebWorks" class="hover:font-bold duration-300"
             >Web Works
           </router-link>
         </li>
-        <li class="mx-2 msm:w-1/4">
-          <router-link to="/ContactMe" class="hover:font-bold"
+        <li class="xl:mb-2 mx-2 msm:w-1/4">
+          <router-link to="/ContactMe" class="hover:font-bold duration-300"
             >Contact Me
           </router-link>
         </li>
@@ -39,6 +39,9 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.router-link-active {
+  font-weight: bold;
 }
 
 img {

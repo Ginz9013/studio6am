@@ -19,7 +19,12 @@
           <h2 class="text-3xl text-white">
             <slot name="contentTittle"></slot>
           </h2>
-          <button type="button" class="p-4 relative" @click="showToggle">
+          <!-- Colse Button -->
+          <button
+            type="button"
+            class="p-4 relative hover:rotate-90 hover:duration-700"
+            @click="showToggle"
+          >
             <div class="w-6 h-0.5 absolute right-0 rotate-45 bg-gray-300"></div>
             <div
               class="w-6 h-0.5 absolute right-0 rotate-m45 bg-gray-300"
