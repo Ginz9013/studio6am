@@ -179,6 +179,10 @@ export default {
           {
             name: "Web UI - Jear Life",
             type: "webUI",
+            skills: ["UI/UX Design", "Adobe XD"],
+            infoUrl: {
+              Website: "https://www.chingjear.com.tw/",
+            },
             imgCover: require("./assets/Portfolio/JearLifeWeb/cover.png"),
             imgContent: [
               require("./assets/Portfolio/JearLifeWeb/cover.png"),
@@ -188,6 +192,20 @@ export default {
           {
             name: "Studio 6.am",
             type: "frontEnd",
+            skills: [
+              "UI/UX Design",
+              "Figma",
+              "HTML/CSS/JavaScript",
+              "Tailwind",
+              "Vue",
+              "Vue-cli",
+              "EmailJS",
+              "Git",
+            ],
+            infoUrl: {
+              website: "https://studio6am.netlify.app/",
+              githubRepo: "https://github.com/Ginz9013/studio6am",
+            },
             imgCover: require("./assets/Portfolio/Studio-6am/cover.png"),
             imgContent: [
               require("./assets/Portfolio/Studio-6am/cover.png"),
@@ -200,6 +218,11 @@ export default {
           {
             name: "Doyoga",
             type: "frontEnd",
+            skills: ["HTML/CSS", "Bootstrap5", "Gulp", "Git"],
+            infoUrl: {
+              website: "https://studio6am.netlify.app/",
+              githubRepo: "https://github.com/Ginz9013/studio6am",
+            },
             imgCover: require("./assets/Portfolio/Doyoga/cover.png"),
             imgContent: [require("./assets/Portfolio/Doyoga/02.png")],
           },

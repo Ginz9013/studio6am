@@ -67,7 +67,7 @@
         <br />
         <input
           type="button"
-          value="Check"
+          value="Send"
           class="bg-white text-black text-lg px-6 py-1 rounded-sm hover:cursor-pointer hover:bg-gray-200 duration-200"
           @click="submit()"
         />

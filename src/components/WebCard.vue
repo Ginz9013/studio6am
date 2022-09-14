@@ -37,7 +37,29 @@
         <div
           class="w-3/4 h-5/6 bg-white z-10 flex flex-col flex-nowrap overflow-auto"
         >
+          <!-- image -->
           <slot name="content"></slot>
+          <div class="p-12">
+            <!-- Skill List -->
+            <h3 class="text-3xl font-bold mb-2">Skills</h3>
+            <ul>
+              <slot name="skills"></slot>
+            </ul>
+            <!-- Repo & Website -->
+            <div class="flex justify-end">
+              <slot name="infoUrl"></slot>
+              <!-- <a
+                class="bg-primary text-white font-bold rounded-full px-4 py-2 hover:cursor-pointer hover:bg-secondary-light mr-6"
+                >Website
+              </a>
+              <a
+                href="#"
+                target="_black"
+                class="bg-primary text-white font-bold rounded-full px-4 py-2 hover:cursor-pointer hover:bg-secondary-light"
+                >Github repo
+              </a> -->
+            </div>
+          </div>
         </div>
         <!-- 黑色背景 -->
         <div
