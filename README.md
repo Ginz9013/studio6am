@@ -1,5 +1,4 @@
 # studio-6am
-test
 
 ## Project setup
 ```
