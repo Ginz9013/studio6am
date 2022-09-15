@@ -85,12 +85,6 @@ export default {
             ],
           },
           {
-            name: "Brand - Studio 6.am",
-            type: "brand",
-            imgCover: require("./assets/Portfolio/Studio-6am/cover.png"),
-            imgContent: [require("./assets/Portfolio/Studio-6am/cover.png")],
-          },
-          {
             name: "Brand - HowTrue 好初手作烘焙",
             type: "brand",
             imgCover: require("./assets/Portfolio/HowTrue/cover.png"),
@@ -203,8 +197,8 @@ export default {
               "Git",
             ],
             infoUrl: {
-              website: "https://studio6am.netlify.app/",
-              githubRepo: "https://github.com/Ginz9013/studio6am",
+              Website: "https://studio6am.netlify.app/",
+              Github_Repo: "https://github.com/Ginz9013/studio6am",
             },
             imgCover: require("./assets/Portfolio/Studio-6am/cover.png"),
             imgContent: [
@@ -220,11 +214,53 @@ export default {
             type: "frontEnd",
             skills: ["HTML/CSS", "Bootstrap5", "Gulp", "Git"],
             infoUrl: {
-              website: "https://studio6am.netlify.app/",
-              githubRepo: "https://github.com/Ginz9013/studio6am",
+              Website: "https://studio6am.netlify.app/",
+              Github_Repo: "https://github.com/Ginz9013/studio6am",
             },
             imgCover: require("./assets/Portfolio/Doyoga/cover.png"),
             imgContent: [require("./assets/Portfolio/Doyoga/02.png")],
+          },
+          {
+            name: "Woworoom",
+            type: "frontEnd",
+            skills: [
+              "HTML/CSS/JavaScript",
+              "RESTfull API",
+              "C3.js",
+              "Tailwind",
+              "gulp",
+              "Git",
+            ],
+            infoUrl: {
+              Website:
+                "https://ginz9013.github.io/hexschool-jslivelecture-task9-1/",
+              Backstage:
+                "https://ginz9013.github.io/hexschool-jslivelecture-task9-1/backstage-items",
+              Github_Repo:
+                "https://github.com/Ginz9013/hexschool-jslivelecture-task9-1",
+            },
+            imgCover: require("./assets/Portfolio/Woworoom/cover.jpg"),
+            imgContent: [require("./assets/Portfolio/Woworoom/01.jpg")],
+          },
+          {
+            name: "Let's Travel!",
+            type: "frontEnd",
+            skills: [
+              "HTML/CSS/JavaScript",
+              "RESTfull API",
+              "C3.js",
+              "Tailwind",
+              "gulp",
+              "Git",
+            ],
+            infoUrl: {
+              Website:
+                "https://ginz9013.github.io/hexschool-jslivelecture-task5/",
+              Github_Repo:
+                "https://github.com/Ginz9013/hexschool-jslivelecture-task5",
+            },
+            imgCover: require("./assets/Portfolio/Let's_Travel/cover.jpg"),
+            imgContent: [require("./assets/Portfolio/Let's_Travel/01.jpg")],
           },
         ],
       },

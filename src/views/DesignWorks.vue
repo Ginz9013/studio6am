@@ -36,7 +36,7 @@
     </nav>
     <div class="flex flex-wrap items-start xl:mt-32">
       <!-- Waterfall 1 -->
-      <div class="w-full md:w-1/2 xl:w-1/3 2xl:w-1/4">
+      <div class="w-1/2 md:w-1/3 2xl:w-1/4">
         <WorksCard v-for="item in projectsArr1" :key="item.name">
           <template v-slot:cover>
             <img :src="item.imgCover" :alt="item.name" />
@@ -50,7 +50,7 @@
         </WorksCard>
       </div>
       <!-- Waterfall 2 -->
-      <div class="w-full md:w-1/2 xl:w-1/3 2xl:w-1/4">
+      <div class="w-1/2 md:w-1/3 2xl:w-1/4">
         <WorksCard v-for="item in projectsArr2" :key="item.name">
           <template v-slot:cover>
             <img :src="item.imgCover" :alt="item.name" />
@@ -64,7 +64,7 @@
         </WorksCard>
       </div>
       <!-- Waterfall 3 -->
-      <div class="w-full md:w-1/2 xl:w-1/3 2xl:w-1/4">
+      <div class="w-1/2 md:w-1/3 2xl:w-1/4">
         <WorksCard v-for="item in projectsArr3" :key="item.name">
           <template v-slot:cover>
             <img :src="item.imgCover" :alt="item.name" />
@@ -78,7 +78,7 @@
         </WorksCard>
       </div>
       <!-- Waterfall 4 -->
-      <div class="w-full md:w-1/2 xl:w-1/3 2xl:w-1/4">
+      <div class="w-1/2 md:w-1/3 2xl:w-1/4">
         <WorksCard v-for="item in projectsArr4" :key="item.name">
           <template v-slot:cover>
             <img :src="item.imgCover" :alt="item.name" />
@@ -157,12 +157,10 @@ export default {
       this.resetCol();
       if (window.innerWidth >= 1536) {
         this.sliceArr(4);
-      } else if (window.innerWidth >= 1280) {
+      } else if (window.innerWidth >= 768) {
         this.sliceArr(3);
-      } else if (window.innerWidth >= 678) {
-        this.sliceArr(2);
       } else {
-        this.sliceArr(1);
+        this.sliceArr(2);
       }
     },
     // ----- 按鈕功能 -----
