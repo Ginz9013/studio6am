@@ -1,5 +1,5 @@
 # studio-6am
-test again and again
+test again and again and again..
 ## Project setup
 ```
 npm install
