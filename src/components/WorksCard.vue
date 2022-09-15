@@ -37,7 +37,9 @@
         <div
           class="w-3/4 h-5/6 bg-white z-10 flex flex-col flex-nowrap overflow-auto"
         >
+          <!-- image -->
           <slot name="content"></slot>
+          <slot name="info"></slot>
         </div>
         <!-- 黑色背景 -->
         <div

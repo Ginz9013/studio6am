@@ -48,16 +48,6 @@
             <!-- Repo & Website -->
             <div class="flex justify-end">
               <slot name="infoUrl"></slot>
-              <!-- <a
-                class="bg-primary text-white font-bold rounded-full px-4 py-2 hover:cursor-pointer hover:bg-secondary-light mr-6"
-                >Website
-              </a>
-              <a
-                href="#"
-                target="_black"
-                class="bg-primary text-white font-bold rounded-full px-4 py-2 hover:cursor-pointer hover:bg-secondary-light"
-                >Github repo
-              </a> -->
             </div>
           </div>
         </div>
