@@ -3,7 +3,8 @@
     <!-- Cover Button -->
     <button @click="showToggle" class="bg-black">
       <div class="hover:opacity-50 duration-300">
-        <slot name="cover"></slot>
+        <!-- 小縮圖 -->
+        <img :src="item.imgCover" :alt="item.name" />
       </div>
     </button>
     <!-- modal -->
@@ -17,7 +18,8 @@
         <!-- Tittle -->
         <div class="w-3/4 flex justify-between items-center z-10 mb-2">
           <h2 class="text-3xl text-white">
-            <slot name="contentTittle"></slot>
+            <!-- 內容標題 -->
+            <p>{{ item.name }}</p>
           </h2>
           <!-- Colse Button -->
           <button
@@ -38,8 +40,36 @@
           class="w-3/4 h-5/6 bg-white z-10 flex flex-col flex-nowrap overflow-auto"
         >
           <!-- image -->
-          <slot name="content"></slot>
-          <slot name="info"></slot>
+          <!-- 內容圖片 -->
+          <img v-for="img in item.imgContent" :key="img" :src="img" alt="" />
+
+          <!-- info 額外資料區 -->
+          <div v-if="item.skills !== undefined">
+            <div class="p-12">
+              <!-- Skill List -->
+              <h3 class="text-3xl font-bold mb-2">Skills</h3>
+              <ul>
+                <li
+                  v-for="skill in item.skills"
+                  :key="skill"
+                  class="font-medium mb-1"
+                >
+                  - {{ skill }}
+                </li>
+              </ul>
+              <!-- Repo & Website -->
+              <div class="flex justify-end">
+                <a
+                  v-for="(url, info) in item.infoUrl"
+                  :key="info"
+                  :href="url"
+                  target="_black"
+                  class="bg-primary text-white font-bold rounded-full px-4 py-2 hover:cursor-pointer hover:bg-secondary-light ml-6 duration-200"
+                  >{{ info }}
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- 黑色背景 -->
         <div
@@ -78,6 +108,7 @@ export default {
       show: false,
     };
   },
+  props: ["item"],
   methods: {
     showToggle: function () {
       this.show = !this.show;

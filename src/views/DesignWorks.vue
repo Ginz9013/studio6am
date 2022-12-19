@@ -36,60 +36,12 @@
     </nav>
     <div class="flex flex-wrap items-start xl:mt-32">
       <!-- Waterfall 1 -->
-      <div class="w-1/2 md:w-1/3 2xl:w-1/4">
-        <WorksCard v-for="item in projectsArr1" :key="item.name">
-          <template v-slot:cover>
-            <img :src="item.imgCover" :alt="item.name" />
-          </template>
-          <template v-slot:contentTittle>
-            <p>{{ item.name }}</p>
-          </template>
-          <template v-slot:content>
-            <img v-for="img in item.imgContent" :key="img" :src="img" alt="" />
-          </template>
-        </WorksCard>
-      </div>
-      <!-- Waterfall 2 -->
-      <div class="w-1/2 md:w-1/3 2xl:w-1/4">
-        <WorksCard v-for="item in projectsArr2" :key="item.name">
-          <template v-slot:cover>
-            <img :src="item.imgCover" :alt="item.name" />
-          </template>
-          <template v-slot:contentTittle>
-            <p>{{ item.name }}</p>
-          </template>
-          <template v-slot:content>
-            <img v-for="img in item.imgContent" :key="img" :src="img" alt="" />
-          </template>
-        </WorksCard>
-      </div>
-      <!-- Waterfall 3 -->
-      <div class="w-1/2 md:w-1/3 2xl:w-1/4">
-        <WorksCard v-for="item in projectsArr3" :key="item.name">
-          <template v-slot:cover>
-            <img :src="item.imgCover" :alt="item.name" />
-          </template>
-          <template v-slot:contentTittle>
-            <p>{{ item.name }}</p>
-          </template>
-          <template v-slot:content>
-            <img v-for="img in item.imgContent" :key="img" :src="img" alt="" />
-          </template>
-        </WorksCard>
-      </div>
-      <!-- Waterfall 4 -->
-      <div class="w-1/2 md:w-1/3 2xl:w-1/4">
-        <WorksCard v-for="item in projectsArr4" :key="item.name">
-          <template v-slot:cover>
-            <img :src="item.imgCover" :alt="item.name" />
-          </template>
-          <template v-slot:contentTittle>
-            <p>{{ item.name }}</p>
-          </template>
-          <template v-slot:content>
-            <img v-for="img in item.imgContent" :key="img" :src="img" alt="" />
-          </template>
-        </WorksCard>
+      <div
+        v-for="(projectsArr, index) in projectsArrs"
+        :key="index"
+        class="w-1/2 md:w-1/3 2xl:w-1/4"
+      >
+        <WorksCard v-for="item in projectsArr" :item="item" :key="item.name" />
       </div>
     </div>
   </div>
@@ -107,10 +59,7 @@ export default {
   data() {
     return {
       designProjectsArr: [],
-      projectsArr1: [],
-      projectsArr2: [],
-      projectsArr3: [],
-      projectsArr4: [],
+      projectsArrs: [[], [], [], []],
     };
   },
   inject: ["designProjects"],
@@ -128,26 +77,23 @@ export default {
     // ----- Col 顯示資料 ------
     // 重置瀑布流的 Col 資料
     resetCol() {
-      this.projectsArr1 = [];
-      this.projectsArr2 = [];
-      this.projectsArr3 = [];
-      this.projectsArr4 = [];
+      this.projectsArr = [[], [], [], []];
     },
     // 分配資料到不同數量的 Col 中
     sliceArr(i) {
       this.designProjectsArr.forEach((e, index) => {
         switch (index % i) {
           case 0:
-            this.projectsArr1.push(e);
+            this.projectsArr[0].push(e);
             break;
           case 1:
-            this.projectsArr2.push(e);
+            this.projectsArr[1].push(e);
             break;
           case 2:
-            this.projectsArr3.push(e);
+            this.projectsArr[2].push(e);
             break;
           case 3:
-            this.projectsArr4.push(e);
+            this.projectsArr[3].push(e);
             break;
         }
       });
