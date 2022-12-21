@@ -35,7 +35,7 @@
       </div>
     </nav>
     <div class="flex flex-wrap items-start xl:mt-32">
-      <!-- Waterfall 1 -->
+      <!-- Waterfall -->
       <div
         v-for="(projectsArr, index) in projectsArrs"
         :key="index"
@@ -77,23 +77,23 @@ export default {
     // ----- Col 顯示資料 ------
     // 重置瀑布流的 Col 資料
     resetCol() {
-      this.projectsArr = [[], [], [], []];
+      this.projectsArrs = [[], [], [], []];
     },
     // 分配資料到不同數量的 Col 中
     sliceArr(i) {
       this.designProjectsArr.forEach((e, index) => {
         switch (index % i) {
           case 0:
-            this.projectsArr[0].push(e);
+            this.projectsArrs[0].push(e);
             break;
           case 1:
-            this.projectsArr[1].push(e);
+            this.projectsArrs[1].push(e);
             break;
           case 2:
-            this.projectsArr[2].push(e);
+            this.projectsArrs[2].push(e);
             break;
           case 3:
-            this.projectsArr[3].push(e);
+            this.projectsArrs[3].push(e);
             break;
         }
       });
